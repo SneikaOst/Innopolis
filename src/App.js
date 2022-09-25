@@ -1,7 +1,9 @@
 import './App.css';
 import Card from './components/elements/card';
+import { products } from './menuList';
 
 function App() {
+
   return (
     <div className="App">
       <div className="products">
@@ -16,62 +18,20 @@ function App() {
           </header>
 
           <main className="products__cards">
-            <Card 
-              url={'/images/mussels.png'}
-              title={'Мидии по рокфеллеровски'}
-              description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-              price={2700}
-              weight={500}
-            />
-            <Card 
-              url={'/images/pork.png'}
-              title={'Свиные ребрышки на гриле с зеленью'}
-              description={'Не следует, однако забывать, что реализация намеченных плановых'}
-              price={1600}
-              weight={750}
-            />
-            <Card 
-              url={'/images/shrimp.png'}
-              title={'Креветки по-королевски в лимонном соке'}
-              description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу'}
-              price={1820}
-              weight={7}
-            />
-            <Card 
-              url={'/images/mussels.png'}
-              title={'Мидии по рокфеллеровски'}
-              description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-              price={2700}
-              weight={500}
-            />
-            <Card 
-              url={'/images/mussels.png'}
-              title={'Мидии по рокфеллеровски'}
-              description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-              price={2700}
-              weight={500}
-            />
-            <Card 
-              url={'/images/pork.png'}
-              title={'Свиные ребрышки на гриле с зеленью'}
-              description={'Не следует, однако забывать, что реализация намеченных плановых'}
-              price={1600}
-              weight={750}
-            />
-            <Card 
-              url={'/images/shrimp.png'}
-              title={'Креветки по-королевски в лимонном соке'}
-              description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу'}
-              price={1820}
-              weight={7}
-            />
-            <Card 
-              url={'/images/mussels.png'}
-              title={'Мидии по рокфеллеровски'}
-              description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-              price={2700}
-              weight={500}
-            />
+
+            {products.map(item => {
+              return (
+                <Card 
+                  key={item.id}
+                  img={item.img}
+                  name={item.name}
+                  description={item.description}
+                  price={item.price}
+                  weight={item.weight}
+              />
+              )
+            })}
+
           </main>
           
         </div>

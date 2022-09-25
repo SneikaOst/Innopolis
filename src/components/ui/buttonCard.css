@@ -4,9 +4,7 @@
 	background-color: transparent;
 	border-radius: 50%;
 	cursor: pointer;
-	box-sizing: border-box;
-	font-size: 27px;
-    line-height: 25px;
+	box-sizing: border-box;	
 }
 
 .card__button:hover {

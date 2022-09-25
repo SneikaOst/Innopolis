@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+	font-family: 'Montserrat',  Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
 .container {
 	width: 1300px;
 	margin: 0 auto;
@@ -6,8 +14,6 @@
 .products {
 	background-color: #161516;
 	color: #FFFFFF;
-	margin: 0;
-	padding: 0;
 }
 
 .products__header {
@@ -82,6 +88,21 @@
 	padding-top: 43px;
 }
 
+.products__cards .card .card__name {
+	margin-top: 31px;
+	margin-bottom: 13px;
+}
+
+.products__cards .card .card__description {
+	margin-bottom: 25px;
+}
+
 .products__cards .card .card__bottom {
 	margin-top: auto;
+}
+
+.products__cards .card .card__button {
+	width: 30px;
+	height: 30px;
+	font-size: 24px; 
 }
