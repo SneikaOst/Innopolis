@@ -3,6 +3,7 @@ import './App.css';
 import CardCart from './components/elements/cardCart';
 import { products } from './menuList';
 import './Cart.css'
+import ButtonDelete from './components/ui/buttonDelete';
 
 function App() {
 
@@ -48,7 +49,7 @@ function App() {
         <div className="container">
           
           <header className="cart__header">
-            <div className="cart__button">Кнопка</div>
+            <div className="cart__button"><ButtonDelete /></div>
             <p className="cart__header-text">Корзина с выбранными товарами</p>           
           </header>
 
