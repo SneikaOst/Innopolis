@@ -1,0 +1,80 @@
+.container {
+	width: 860px;
+	margin: 0 auto;
+}
+
+.cart {
+	background-color: #161516;
+	color: #FFFFFF;
+}
+
+.cart__header {
+	display: flex;
+	justify-content: center;
+	height: 129px;
+	
+}
+
+.cart__header-text {
+	margin-top: 54px;
+	font-weight: 700;
+	font-size: 31px;
+	line-height: 38px;
+	text-transform: uppercase;
+}
+
+.cart__cards {
+	padding-bottom: 35px;
+	height: calc(100vh - 129px - 91px - 35px);
+	overflow-y: auto;
+}
+
+.cart__cards .card {
+	height: 122px;
+}
+
+.cart__footer {
+	border-top: 1px solid #D58C51;
+	height: 90px;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 26px;
+	text-transform: uppercase;
+	display: flex;
+}
+
+.footer {
+	display: flex;
+	vertical-align: center;
+	justify-content: space-between;
+	padding-top: 28px;
+}
+
+.footer__text span {
+	padding-left: 15px;
+}
+
+.footer__button {
+	width: 200px;
+	height: 42px;
+	border: 1px solid #D58C51;
+	box-sizing: border-box;
+	background: transparent;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.footer__button:hover {
+	background: #D58C51;
+	color: #131313;
+}
+
+.cart__cards .card .card__button {
+	width: 30px;
+	height: 30px;
+	font-size: 20px; 
+	padding-bottom: 3px;
+}

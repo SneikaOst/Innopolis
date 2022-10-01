@@ -1,0 +1,36 @@
+.card {
+	display: grid;
+	grid-template-columns: 120px 1fr 114px;
+	height: 122px;
+	column-gap: 90px;
+	padding-bottom: 35px;
+	align-items: center;
+}
+
+.card img {
+	height: 122px;
+}
+
+.card:hover {
+	color: #D58C51;
+}
+
+.card__name {
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 21px;
+}
+
+.card__right {
+	display: flex;
+
+}
+
+.card__price {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+	color: #D58C51;
+	padding-right: 15px;
+}
+

@@ -1,0 +1,13 @@
+.card__button {
+	border: 1px solid #D58C51;
+	color: #D58C51;
+	background-color: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	box-sizing: border-box;	
+}
+
+.card__button:hover {
+	background-color: #D58C51;
+	color: #ffffff;
+}
