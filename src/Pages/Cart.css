@@ -29,10 +29,13 @@
 	overflow-y: auto;
 }
 
+
 .cart__cards .card {
 	height: 122px;
 	border: none;
 }
+
+
 
 .cart__cards .card .card__button {
 	width: 30px;

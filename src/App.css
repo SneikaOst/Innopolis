@@ -7,3 +7,17 @@
 	background-color: #161516;
 	color: #FFFFFF;
 }
+
+*::-webkit-scrollbar {
+	width: 12px;               
+}
+
+*::-webkit-scrollbar-track {
+	background: #D58C51;       
+}
+
+  *::-webkit-scrollbar-thumb {
+	background-color: #161516;    
+	border-radius: 20px;       
+	border: 1px solid #D58C51;
+}
