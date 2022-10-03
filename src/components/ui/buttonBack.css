@@ -1,0 +1,12 @@
+.card__button-back svg {
+	fill: #D58C51;
+}
+
+.card__button-back:hover {
+	background-color: #D58C51;
+}
+
+.card__button-back:hover svg{
+	background-color: #D58C51;
+	fill: #ffffff;
+}
