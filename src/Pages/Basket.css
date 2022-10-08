@@ -1,21 +1,29 @@
 .container {
 	width: 860px;
 	margin: 0 auto;
+	color: #FFFFFF;
 }
 
-.cart {
+.Cart {
 	background-color: #161516;
 	color: #FFFFFF;
 }
 
 .cart__header {
-	padding-top: 54px;
-	display: grid;
-	grid-template-columns: 32px 1fr;
-	column-gap: 63px;
-	height: 75px;
-	
+	display: flex;
+	height: 94px;
+
 }
+
+.wrapper {
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	width: 100%;
+	padding: 52px 70px 0 70px;
+
+}
+
 
 .cart__header-text {
 	font-weight: 700;
@@ -27,12 +35,14 @@
 .cart__cards {
 	height: calc(100vh - 129px - 91px);
 	overflow-y: auto;
+	margin-top: 35px;
 }
 
 
 .cart__cards .card {
 	height: 122px;
 	border: none;
+	row-gap: 35px;
 }
 
 
@@ -65,30 +75,12 @@
 
 .footer {
 	display: flex;
-	vertical-align: center;
+	align-items: baseline;
 	justify-content: space-between;
-	padding-top: 28px;
+	padding-top: 20px;
 }
 
 .footer__text span {
 	padding-left: 15px;
-}
-
-.footer__button {
-	width: 200px;
-	height: 42px;
-	border: 1px solid #D58C51;
-	box-sizing: border-box;
-	background: transparent;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 17px;
-	color: #ffffff;
-	cursor: pointer;
-}
-
-.footer__button:hover {
-	background: #D58C51;
-	color: #131313;
 }
 

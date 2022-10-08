@@ -1,5 +1,8 @@
 import Card from '../components/elements/card';
 import './Products.css'
+import BasketButton from '../components/ui/BasketButton';
+// import RectangleButton from '../components/ui/RectangleButton';
+// import { Link } from 'react-router-dom'
 
 import { products } from '../menuList';
 
@@ -13,7 +16,17 @@ function Products() {
 			<p className="products__header-text">наша продукция</p>
 			<div className="products__cart">
 			<div className="products__cart-text">3 товара <br></br>на сумму 3 500 ₽</div>
-			<a  href="#" className="products__cart-icon"></a>
+			<div className="products__cart-icon">
+				<BasketButton></BasketButton>
+			</div>
+			{/* <a href="/basket" className="products__cart-icon">
+					<BasketButton />
+				</a>
+				
+				<RectangleButton 
+				text={"Выйти"}
+				/> */}
+
 			</div>
 		</header>
 

@@ -1,7 +1,7 @@
-import './cardCart.css'
-import ButtonDelete from '../ui/buttonDelete';
+import './cardBasket.css'
+import ButtonDelete from '../ui/ButtonDelete';
 
-function CardCart ({ img, name, price }) {
+function CardBasket ({ img, name, price }) {
 	return (
 		<div className="card">
 			<img src={img} alt="" />
@@ -15,4 +15,4 @@ function CardCart ({ img, name, price }) {
 	);
 }
 
-export default CardCart
+export default CardBasket

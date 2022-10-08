@@ -1,16 +1,20 @@
 import './App.css';
-import Cart from './Pages/Cart';
-// import Products from './Pages/Products';
+// import Basket from './pages/Basket';
+import Products from './pages/Products';
+// import { Routes, Route } from 'react-router-dom'
+
+
 
 
 
 function App() {
-
   return (
-    // <Products />
-    <Cart />
-    )
-  };
+    <Products />
+    // <Basket />
+
+
+  );
+}
 
 
 export default App;
