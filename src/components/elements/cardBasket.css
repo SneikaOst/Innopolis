@@ -1,4 +1,4 @@
-.card {
+.card-basket {
 	display: grid;
 	grid-template-columns: 120px 1fr 125px;
 	height: 122px;
@@ -9,21 +9,21 @@
 	cursor: pointer;
 }
 
-.card img {
+.card-basket img {
 	height: 122px;
 }
 
-.card:hover {
+.card-basket:hover {
 	color: #D58C51;
 }
 
-.card__name {
+.card-basket__name {
 	font-weight: 500;
 	font-size: 17px;
 	line-height: 21px;
 }
 
-.card__right {
+.card-basket__right {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -31,7 +31,7 @@
 
 }
 
-.card__price {
+.card-basket__price {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 22px;

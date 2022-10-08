@@ -1,5 +1,5 @@
-.container {
-	width: 860px;
+.container-cart {
+	max-width: 860px;
 	margin: 0 auto;
 	color: #FFFFFF;
 }
@@ -39,29 +39,11 @@
 }
 
 
-.cart__cards .card {
+.cart__cards .card-basket {
 	height: 122px;
 	border: none;
 	row-gap: 35px;
 }
-
-
-
-.cart__cards .card .card__button {
-	width: 30px;
-	height: 30px;
-	font-size: 20px; 
-	padding-bottom: 4px;
-}
-
-.cart__header .card__button {
-	width: 32px;
-	height: 32px;
-	font-size: 20px; 
-	padding-bottom: 3px;
-	margin-top: 3px;
-}
-
 
 .cart__footer {
 	border-top: 1px solid #D58C51;
@@ -78,9 +60,14 @@
 	align-items: baseline;
 	justify-content: space-between;
 	padding-top: 20px;
+	width: 100%;
 }
 
 .footer__text span {
 	padding-left: 15px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+	color: #D58C51;
 }
 
