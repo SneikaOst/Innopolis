@@ -10,9 +10,15 @@ import { Link } from 'react-router-dom';
 
 
 function Basket() {
+	const basket = useSelector((state) => state.basket)
+	
 
-  const basket = useSelector(state => state.basket.basket)
-  console.log('basket', basket)
+	const totalPrice = basket
+    .map((product) => product.price)
+    .reduce((sum, a) => sum + a, 0);
+
+
+	console.log('basket', basket)
 
 
 	return (
@@ -36,7 +42,7 @@ function Basket() {
 			
 			<main className="cart__cards">
         
-      {/* {products.map(item => {
+		{/* {products.map(item => {
 				return (
 				<CardBasket 
 					key={item.id}
@@ -47,21 +53,23 @@ function Basket() {
 				)
       })} */}
 
-        {basket.map(item => {
-          return (
-            <CardBasket
-              img={item.img}
-              name={item.name}
-              price={item.price}
-            />
-            )
-          })}
+		{basket.map(product => {
+			return (
+				<CardBasket
+				img={product.img}
+				name={product.name}
+				price={product.price}
+				/>
+				)
+			})}
+
+
 			</main>
 			
 			</div>
 			<footer className="cart__footer">
 				<div className="container-cart footer">
-					<p className="footer__text">Заказ на сумму: <span className='card__price'>6 220 ₽</span></p>
+					<p className="footer__text">Заказ на сумму: <span className='card__price'>{totalPrice} ₽</span></p>
 					<RectangleButton 
 						text={'Оформить заказ'}
 					/>
@@ -72,45 +80,3 @@ function Basket() {
 }
 
 export default Basket;
-
-
-// import './Basket.css'
-
-// import { useSelector } from 'react-redux'
-
-// import CardBasket from '../components/elements/cardBasket'
-
-// function Basket () {
-//   const basket = useSelector(state => state.basket.basket)
-//   console.log('basket', basket)
-
-//   return (
-//     <div className="basket">
-//       <div className="basket-wrapper">
-//         <header className='basket-header'>
-//           Корзина с выбранными товарами
-//         </header>
-
-//         <div className="basket-products">
-//           {basket.map(item => {
-//             return (
-//               <CardBasket
-//                 img={item.url}
-//                 title={item.title}
-//                 price={item.price}
-//               />
-//             )
-//           })}
-//         </div>
-//       </div>
-
-//       <footer className="basket-footer">
-//         <div className="basket-wrapper">
-//           Заказ на сумму:
-//         </div>
-//         </footer>
-//     </div>
-//   )
-// }
-
-// export default Basket

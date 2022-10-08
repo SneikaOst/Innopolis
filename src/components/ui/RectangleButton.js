@@ -4,8 +4,8 @@ export default function RectangleButton({ text, handleClick }) {
 	return (
 		<button	
 		className={classes.button}
-		onClick={handleClick}
-		>{text}
+		onClick={handleClick}>
+			{text}
 		</button>
 	)
 }
