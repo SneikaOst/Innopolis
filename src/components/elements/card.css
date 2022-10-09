@@ -9,6 +9,15 @@
 	cursor: pointer;
 }
 
+.card__link {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.card__link:hover {
+	color: #D58C51;
+}
+
 .card__name {
 	font-weight: 500;
 	font-size: 17px;

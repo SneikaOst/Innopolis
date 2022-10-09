@@ -7,34 +7,37 @@ import ButtonBack from "../components/ui/ButtonBack";
 
 import { Link } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
-import { addToBasketAction } from "../store/basketStore";
+import { products } from "../menuList";
 
-import { v4 as uuidv4 } from 'uuid'
+// import { useSelector, useDispatch } from "react-redux";
+// import { addToBasketAction } from "../store/basketStore";
 
+// import { v4 as uuidv4 } from 'uuid'
+
+import { useMatch, useParams } from "react-router-dom";
 
 
 function ProductDetails() {
-	const basket = useSelector((state) => state.basket);
-  const dispatch = useDispatch();
-  const addToBasket = (product) => dispatch(addToBasketAction(product));
+	// const basket = useSelector((state) => state.basket);
+  // const dispatch = useDispatch();
+  // const addToBasket = (product) => dispatch(addToBasketAction(product));
 
-  const totalPrice = basket
-    .map((product) => product.price)
-    .reduce((sum, a) => sum + a, 0);
+  // const totalPrice = basket
+  //   .map((product) => product.price)
+  //   .reduce((sum, a) => sum + a, 0);
 
-  const count = 0;
-  let totalCount;
+  // const count = 0;
+  // let totalCount;
 
-  function nameText(count) {
-    if (count === 1) {
-      return "товар";
-    } else if (count > 1 && count < 5) {
-      return "товара";
-    } else {
-      return "товаров";
-    }
-  }
+  // function nameText(count) {
+  //   if (count === 1) {
+  //     return "товар";
+  //   } else if (count > 1 && count < 5) {
+  //     return "товара";
+  //   } else {
+  //     return "товаров";
+  //   }
+  // }
 
 	return (
     <div className="ProductDetails">
@@ -45,8 +48,12 @@ function ProductDetails() {
 						</Link>
 
 						<div className="products__cart">
-            <div className="products__cart-text">
+            {/* <div className="products__cart-text">
               {totalCount} {nameText(count)} <br></br>на сумму {totalPrice} ₽
+            </div> */}
+
+						<div className="products__cart-text">
+              3 товара <br></br>на сумму xxx ₽
             </div>
 
             <Link to={"/basket"} className="products__cart-icon">
@@ -58,6 +65,10 @@ function ProductDetails() {
 					</div>
 			</header>
 			<main className="details__card">
+
+
+
+				
 				<CardDetails 
 					img={'/images/mussels.png'}
 					name={'Мидии в винном соусе'}

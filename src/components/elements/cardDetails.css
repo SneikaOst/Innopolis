@@ -5,13 +5,15 @@
 }
 
 .card-details__img{
-	width: 500px;
-	height: 500px;
+	max-width: 500px;
+	max-height: 500px;
+	width: auto;
+	height: 100%;
 }
 
 .card-details__content {
-	width: 40%;
 	margin: 60px 0;
+	margin-left: 32px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -19,6 +21,7 @@
 
 .card-details__text {
 	overflow-y: auto;
+	max-width: 528px;
 
 }
 

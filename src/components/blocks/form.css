@@ -134,12 +134,12 @@
 	color: #301411;
 }
 
-.checkbox__text-link {
+/* .checkbox__text-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #787878;
-}
+  color: #301411;
+} */
 
 .checkbox__label::after {
   content: "";

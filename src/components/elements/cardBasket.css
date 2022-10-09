@@ -1,12 +1,17 @@
 .card-basket {
-	display: grid;
-	grid-template-columns: 120px 1fr 125px;
+	/* display: grid;
+	grid-template-columns: 120px 1fr 125px; */
+	display: flex;
+	justify-content: space-between;
 	height: 122px;
 	column-gap: 90px;
 	align-items: center;
-	margin-bottom: 35px;
 	transition: all .3s ease;
 	cursor: pointer;
+}
+
+.cards {
+	margin-bottom: 35px;
 }
 
 .card-basket img {

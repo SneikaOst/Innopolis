@@ -2,16 +2,21 @@
 	background: url('../../public/images/background.png') center/cover no-repeat;
 	background-color: #161516;
 	color: #FFFFFF;
+	
 }
 
 .details__header {
 	display: flex;
 	padding-bottom: 25px;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .details__card {
+	align-items: center;
 	max-width: 1230px;
 	margin: 0 auto;
 	height: calc(100vh - 127px - 108px);
 	padding-bottom: 108px;
+	width: 100%;
 }
