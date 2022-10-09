@@ -31,7 +31,6 @@ function Card ({ img, name, description, price, weight, onButtonClick }) {
 				<div className="card__price">{price} ₽ <span> / {weight}</span>
 				</div>
 				
-				{/* <CardButton handleClick={addProduct} /> */}
 				<CardButton onClick={onButtonClick}/>
 
 			</div>

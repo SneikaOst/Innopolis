@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPosts } from '../store/reducers/posts'
+import { getPosts } from '../store-2/reducers/posts'
 
 
 function Posts() {
