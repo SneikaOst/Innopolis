@@ -1,11 +1,9 @@
-import { createAction, createReducer } from "@reduxjs/toolkit";
+import { createAction, createReducer } from '@reduxjs/toolkit'
 
-const initialState = [];
+export const addProductListAction = createAction('product/addProductListAction')
+export const clearProductListAction = createAction('product/clearProductListAction')
 
-export const addProductListAction = createAction("basket/addProductListAction");
-export const clearProductListAction = createAction("basket/clearProductListAction");
-
-export const basketReducer = createReducer(initialState, (builder) => {
-	builder.addCase(addProductListAction, (state, action) => action.payload);
-	
-  });
+export const productReducer = createReducer([], (builder) => {
+  builder.addCase(addProductListAction, (state, action) => action.payload);
+  builder.addCase(clearProductListAction, () => []);
+})

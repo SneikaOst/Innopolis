@@ -1,6 +1,6 @@
 import "./404.css";
 import { Link } from "react-router-dom";
-import RectangleButton from "../components/ui/RectangleButton";
+import Button from "../components/ui/Button";
 
 function NotFound() {
   return (
@@ -9,7 +9,7 @@ function NotFound() {
 			<h1 className="error__title">404</h1>
       <p className="error__text">Данной страницы не существует</p>
       <Link to="/">
-				<RectangleButton text={'На главную'} />
+				<Button>На главную</Button>
 			</Link>
 			</div>
       

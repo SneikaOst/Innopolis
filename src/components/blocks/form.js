@@ -1,5 +1,5 @@
 import "./form.css"
-import RectangleButton from "../ui/RectangleButton";
+import Button from "../ui/Button";
 
 function Form() {
   return (
@@ -31,10 +31,10 @@ function Form() {
 				</label>
 			</fieldset>
 			
-			<div id="checkbox-error" class="fieldset__error error">Логин или пароль неверен</div>
+			<div id="checkbox-error" class="fieldset__error error"><span class="fieldset__error">Логин или пароль неверен</span></div>
 
 			<fieldset class="form__fieldset fieldset submit">
-				<RectangleButton text="Войти"></RectangleButton>
+				<Button>Войти</Button>
 			</fieldset>
 
     </div>

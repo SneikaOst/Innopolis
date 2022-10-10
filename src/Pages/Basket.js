@@ -1,15 +1,22 @@
 import "./Basket.css";
 import CardBasket from "../components/elements/cardBasket";
 import ButtonBack from "../components/ui/ButtonBack";
-import RectangleButton from "../components/ui/RectangleButton";
+import Button from "../components/ui/Button";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+
+import { removeFromBasketAction } from "../store/basketStore";
+
+
 
 import { v4 as uuidv4 } from 'uuid'
 
 function Basket() {
   const basket = useSelector((state) => state.basket);
+  const dispatch = useDispatch();
+
+  const removeFromBasket = (product) => dispatch(removeFromBasketAction(product));
 
   const totalPrice = basket
     .map((product) => product.price)
@@ -25,9 +32,11 @@ function Basket() {
             <ButtonBack />
           </Link>
 
-          <p className="cart__header-text">Корзина с выбранными товарами</p>
+          <h1 className="cart__header-text">Корзина с выбранными товарами</h1>
 
-          <RectangleButton text={"Выйти"} />
+          <Link to="/form">
+            <Button>Выйти</Button>
+          </Link>
         </div>
       </header>
 
@@ -37,11 +46,14 @@ function Basket() {
           {basket.map((product) => {
             return (
               <CardBasket
-								key={uuidv4()}
-								// key={product.id}
+                // idx={uuidv4(product.id)}
+								key={uuidv4(product.id)}
                 img={product.img}
                 name={product.name}
                 price={product.price}
+                url={`/details/${product.id}`}
+                onClick={() => removeFromBasket(product)}
+
               />
             );
           })}
@@ -52,7 +64,7 @@ function Basket() {
           <p className="footer__text">
             Заказ на сумму: <span className="card__price">{totalPrice} ₽</span>
           </p>
-          <RectangleButton text={"Оформить заказ"} />
+          <Button>Оформить заказ</Button>
         </div>
       </footer>
     </div>
