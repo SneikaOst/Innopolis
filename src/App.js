@@ -10,14 +10,14 @@ import NotFound from "./pages/404";
 import { useEffect } from 'react'
 import { products } from "./menuList";
 import { useDispatch } from 'react-redux'
-import { addProductListAction } from './store/productStore'
+import { addProductListAction } from './store/reducers/productStore'
 
 
 function App() {
   const dispatch = useDispatch()
   const addProductList = (list) => dispatch(addProductListAction(list))
 
-  useEffect(() => {
+  useEffect(() => { 
     // TODO: data fetching
     addProductList(products);
   }, [])

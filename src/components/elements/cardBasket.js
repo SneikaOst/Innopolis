@@ -1,8 +1,16 @@
 import "./cardBasket.css";
 import ButtonDelete from "../ui/ButtonDelete";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { removeProductBasket } from "../../store/reducers/basketStore";
 
-function CardBasket({ img, name, price, url, onClick }) {
+function CardBasket({ idx,img, name, price, url }) {
+  const dispatch = useDispatch()
+  const handleDelete = () => {
+    dispatch(removeProductBasket(idx))
+
+  }
+
   return (
     <div className="card-basket cards">
       <Link to={url} className="card__link">
@@ -13,7 +21,7 @@ function CardBasket({ img, name, price, url, onClick }) {
       </Link>
       <div className="card-basket__right">
         <div className="card-basket__price">{price} ₽ </div>
-        <ButtonDelete onClick={onClick} />
+        <ButtonDelete onClick={handleDelete} />
       </div>
     </div>
   );

@@ -1,8 +1,28 @@
 import "./card.css";
 import CardButton from "../ui/CardButton";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux"
+import { v4 as uuidv4 } from "uuid";
+import { addProductInBasket } from "../../store/reducers/basketStore"
 
-function Card({ img, name, description, price, weight, onClick, url }) {
+function Card({ id, img, name, description, price, weight, url }) {
+  
+  
+  const dispatch = useDispatch()
+  
+  const addProduct = () => {
+    const item = {
+      id: id,
+      idx: uuidv4(),
+      name: name,
+      url: url,
+      price: price,
+      img: img
+    }
+
+    dispatch(addProductInBasket(item))
+  }
+
   return (
     <div className="card">
       <Link to={url} className="card__link">
@@ -16,7 +36,7 @@ function Card({ img, name, description, price, weight, onClick, url }) {
           {price} ₽ <span> / {weight}</span>
         </div>
 
-        <CardButton onClick={onClick} />
+        <CardButton onClick={addProduct} />
       </div>
     </div>
   );

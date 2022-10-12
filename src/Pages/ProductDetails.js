@@ -4,10 +4,11 @@ import {
 } from "react-router-dom";
 import "./ProductDetails.css";
 
-// import classes from "./Product.module.css";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
-import { addToBasketAction } from "../store/basketStore";
+
+import { addProductInBasket } from "../store/reducers/basketStore";
+
 
 import ButtonBack from "../components/ui/ButtonBack";
 import Button from "../components/ui/Button";
@@ -18,20 +19,18 @@ export default function ProductDetails() {
   const { productId } = useParams();
 
 
-  const basket = useSelector((state) => state.basket)
+  // const basket = useSelector((state) => state.basket)
   const dispatch = useDispatch();
 
 
-  const addToBasket = (product) => dispatch(addToBasketAction(product));
+  const addToBasket = (product) => dispatch(addProductInBasket(product));
 
-  const totalPrice = basket
-  .map((product) => product.price)
-  .reduce((sum, a) => sum + a, 0);
+  // const totalPrice = basket
+  // .map((product) => product.price)
+  // .reduce((sum, a) => sum + a, 0);
 
-  
-
-  const count = 0;
-
+    const prices = useSelector(state => state.basket.pricesbasket)
+  const count = useSelector(state => state.basket.countProducts);
 
   function nameText(count) {
     if (count === 1) {
@@ -47,6 +46,7 @@ export default function ProductDetails() {
 
   const productList = useSelector((state) => state.product);
   const product = productList.find((e) => e.id === Number(productId));
+
   const navigate = useNavigate();
 
   if (!product) {
@@ -58,9 +58,6 @@ export default function ProductDetails() {
   const { img, name, description } = product;
 
 
-
-
-
   return (
     <div className="ProductDetails">
       <header className="details__header">
@@ -69,12 +66,9 @@ export default function ProductDetails() {
 
           <div className="products__cart">
             <div className="products__cart-text">
-              {count} {nameText(count)} <br></br>на сумму {totalPrice} ₽
+              {count} {nameText(count)} <br></br>на сумму {prices} ₽
             </div>
 
-            {/* <div className="products__cart-text">
-              3 товара <br></br>на сумму xxx ₽
-            </div> */}
             <Link to={"/basket"} className="products__cart-icon">
               <BasketButton></BasketButton>
             </Link>
