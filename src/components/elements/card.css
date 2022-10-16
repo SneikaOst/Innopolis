@@ -6,7 +6,6 @@
 
 .card:hover {
 	color: #D58C51;
-	cursor: pointer;
 }
 
 .card__link {
@@ -16,6 +15,7 @@
 
 .card__link:hover {
 	color: #D58C51;
+	cursor: pointer;
 }
 
 .card__name {
