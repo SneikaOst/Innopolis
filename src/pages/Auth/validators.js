@@ -26,12 +26,3 @@ export function getCheckboxError(value) {
   }
   return "";
 }
-
-// export function getUserError(user) {
-//   // if (!user) {
-//   if (localStorage.getItem("user") === null) {
-//     console.error("Данных о пользователях нет!");
-//     return requiredError;
-//   }
-//   return "";
-// }

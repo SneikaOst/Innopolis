@@ -3,7 +3,6 @@ import {
   getCheckboxError,
   getLoginError,
   getPasswordError,
-  // getUserError
 } from "../../pages/Auth/validators";
 import classnames from "classnames";
 import { useDispatch } from "react-redux";
@@ -20,7 +19,6 @@ function Form() {
   const [password, setPassword] = useState("");
   const [checkbox, setCheckbox] = useState("");
   const [showError, setShowError] = useState(false);
-  // const [user, setUser] = useState("");
 
   const dispatch = useDispatch();
   const signIn = (auth) => dispatch(signInAction(auth));
@@ -29,7 +27,6 @@ function Form() {
   const loginError = useMemo(() => getLoginError(login), [login]);
   const passwordError = useMemo(() => getPasswordError(password), [password]);
   const checkboxError = useMemo(() => getCheckboxError(checkbox), [checkbox]);
-  // const userError = useMemo(() => getUserError(user), [user]);
 
   const [isSignUp, setIsSignUp] = useState(false);
 
@@ -61,9 +58,6 @@ function Form() {
           [errorClass]: showError && loginError,
         })}
       >
-        {/* <label className="fieldset__label" htmlFor="login">
-          login
-        </label> */}
         <input
           onChange={(e) => setLogin(e.currentTarget.value)}
           className="fieldset__input"
@@ -78,9 +72,6 @@ function Form() {
           [errorClass]: showError && passwordError,
         })}
       >
-        {/* <label className="fieldset__label" htmlFor="password">
-          Пароль
-        </label> */}
         <input
           onChange={(e) => setPassword(e.currentTarget.value)}
           className="fieldset__input"
@@ -91,7 +82,6 @@ function Form() {
         <span className="fieldset__error">{passwordError}</span>
       </fieldset>
 
-      {/* {isSignUp && ( */}
       <fieldset
         className={classnames("form__fieldset fieldset checkbox", {
           [errorClass]: showError && checkboxError,
@@ -120,7 +110,6 @@ function Form() {
           </span>
         </label>
       </fieldset>
-      {/* // )} */}
 
       <div
         className={classnames("fieldset__error error", {
