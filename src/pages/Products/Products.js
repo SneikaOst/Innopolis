@@ -5,9 +5,7 @@ import "./Products.css";
 import Button from "../../components/ui/Button";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
 import { v4 as uuidv4 } from "uuid";
-
 import { useLogOut, useRedirectIfNotAuth } from "../../hooks/authHooks";
 
 function Products() {

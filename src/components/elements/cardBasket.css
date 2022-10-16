@@ -1,6 +1,4 @@
 .card-basket {
-	/* display: grid;
-	grid-template-columns: 120px 1fr 125px; */
 	display: flex;
 	justify-content: space-between;
 	height: 122px;
