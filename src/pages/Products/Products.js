@@ -6,16 +6,13 @@ import Button from "../../components/ui/Button";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
 import { v4 as uuidv4 } from "uuid";
 
 import { useLogOut, useRedirectIfNotAuth } from "../../hooks/authHooks";
 
 function Products() {
-
-
-  const prices = useSelector(state => state.basket.pricesbasket)
-  const count = useSelector(state => state.basket.countProducts);
+  const prices = useSelector((state) => state.basket.pricesbasket);
+  const count = useSelector((state) => state.basket.countProducts);
 
   function nameText(count) {
     if (count === 1) {
@@ -29,7 +26,7 @@ function Products() {
 
   const logOut = useLogOut();
 
-  useRedirectIfNotAuth()
+  useRedirectIfNotAuth();
 
   return (
     <div className="Products">
@@ -37,9 +34,8 @@ function Products() {
         <header className="products__header">
           <h1 className="products__header-text">наша продукция</h1>
           <div className="products__cart">
-
             <div className="products__cart-text">
-            {count} {nameText(count)} <br></br>на сумму {prices} ₽
+              {count} {nameText(count)} <br></br>на сумму {prices} ₽
             </div>
 
             <Link to={"/basket"} className="products__cart-icon">
@@ -53,12 +49,6 @@ function Products() {
         <main className="products__cards">
           {products.map((product) => {
             const { id, img, name, description, price, weight } = product;
-            // const price = product.price?.toLocaleString("ru");
-            // const weight = product.weight?.toLocaleString("ru");
-
-            // const price = item.price;
-            // const weight = item.weight;
-
             return (
               <Card
                 id={id}

@@ -1,27 +1,18 @@
 import { useParams } from "react-router-dom";
 import "./ProductDetails.css";
-
 import { useSelector, useDispatch } from "react-redux";
-
 import { addProductInBasket } from "../../store/reducers/basketStore";
-
 import ButtonBack from "../../components/ui/ButtonBack";
 import Button from "../../components/ui/Button";
 import BasketButton from "../../components/ui/BasketButton";
 import { Link } from "react-router-dom";
-
-import { useGoBack } from '../../hooks/basketHooks'
+import { useGoBack } from "../../hooks/basketHooks";
 import { useLogOut, useRedirectIfNotAuth } from "../../hooks/authHooks";
-
 import { v4 as uuidv4 } from "uuid";
-
-
 
 export default function ProductDetails() {
   const { productId } = useParams();
-
   const dispatch = useDispatch();
-
   const prices = useSelector((state) => state.basket.pricesbasket);
   const count = useSelector((state) => state.basket.countProducts);
 
@@ -40,8 +31,7 @@ export default function ProductDetails() {
   const goBack = useGoBack();
   const logOut = useLogOut();
 
-
-  useRedirectIfNotAuth()
+  useRedirectIfNotAuth();
 
   if (!product) {
     return "";
@@ -56,12 +46,12 @@ export default function ProductDetails() {
       idx: uuidv4(),
       name: name,
       price: price,
-      img: img
-    }
+      img: img,
+    };
 
-    dispatch(addProductInBasket(item))
-  }
-  const formatPrice = price.toLocaleString('ru')
+    dispatch(addProductInBasket(item));
+  };
+  const formatPrice = price.toLocaleString("ru");
 
   return (
     <div className="ProductDetails">
