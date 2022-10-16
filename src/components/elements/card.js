@@ -1,15 +1,13 @@
 import "./card.css";
 import CardButton from "../ui/CardButton";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import { addProductInBasket } from "../../store/reducers/basketStore"
+import { addProductInBasket } from "../../store/reducers/basketStore";
 
 function Card({ id, img, name, description, price, weight, url }) {
-  
-  
-  const dispatch = useDispatch()
-  
+  const dispatch = useDispatch();
+
   const addProduct = () => {
     const item = {
       id: id,
@@ -17,11 +15,12 @@ function Card({ id, img, name, description, price, weight, url }) {
       name: name,
       url: url,
       price: price,
-      img: img
-    }
+      img: img,
+    };
 
-    dispatch(addProductInBasket(item))
-  }
+    dispatch(addProductInBasket(item));
+  };
+  const formatPrice = price.toLocaleString("ru");
 
   return (
     <div className="card">
@@ -33,7 +32,7 @@ function Card({ id, img, name, description, price, weight, url }) {
 
       <div className="card__bottom">
         <div className="card__price">
-          {price} ₽ <span> / {weight}</span>
+          {formatPrice} ₽ <span> / {weight}</span>
         </div>
 
         <CardButton onClick={addProduct} />

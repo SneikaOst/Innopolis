@@ -9,7 +9,7 @@
     border: 1px solid;
     cursor: pointer;
     transition: all .275s ease;
-	box-sizing: border-box;	
+    box-sizing: border-box;
 }
 
 .button:hover {
@@ -19,10 +19,10 @@
 
 
 .button svg {
-	fill: #D58C51;
+    fill: #D58C51;
 }
 
-.button:hover svg{
-	background-color: #D58C51;
-	fill: #ffffff;
+.button:hover svg {
+    background-color: #D58C51;
+    fill: #ffffff;
 }

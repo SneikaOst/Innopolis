@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { removeProductBasket } from "../../store/reducers/basketStore";
 
-function CardBasket({ idx,img, name, price, url }) {
-  const dispatch = useDispatch()
+function CardBasket({ idx, img, name, price, url }) {
+  const dispatch = useDispatch();
   const handleDelete = () => {
-    dispatch(removeProductBasket(idx))
-
-  }
-
+    dispatch(removeProductBasket(idx));
+  };
+  const formatPrice = price.toLocaleString("ru");
   return (
     <div className="card-basket cards">
       <Link to={url} className="card__link">
@@ -20,7 +19,7 @@ function CardBasket({ idx,img, name, price, url }) {
         </div>
       </Link>
       <div className="card-basket__right">
-        <div className="card-basket__price">{price} ₽ </div>
+        <div className="card-basket__price">{formatPrice} ₽ </div>
         <ButtonDelete onClick={handleDelete} />
       </div>
     </div>

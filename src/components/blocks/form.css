@@ -20,6 +20,9 @@
 	text-align: right;
 	text-decoration-line: underline;
 	color: #D58C51;
+  
+  cursor: pointer;
+  border: none;
 
 	position: absolute;
 	right: 0;
@@ -53,30 +56,6 @@
 .form__fieldset:nth-child(5) {
 	margin-bottom: 0;
 }
-
-/* .fieldset_error {
-  color: #CB2424;
-}
-.fieldset_error .fieldset__label {
-  color: #CB2424;
-}
-.fieldset_error .fieldset__label::before {
-  color: #CB2424;
-}
-.fieldset_error .fieldset__input {
-  border: 1px solid #CB2424;
-  color: #CB2424;
-}
-.fieldset_error .fieldset__error {
-  display: block;
-}
-.fieldset_error .checkbox__label::before {
-  color: #CB2424;
-}
-.fieldset_error .checkbox__label::after {
-  color: #CB2424;
-  border: 1px solid #CB2424;
-} */
 
 .fieldset__input {
   background: #FFFFFF;
@@ -115,14 +94,19 @@
 	left: 20px;
 }
 
+
 .error {
 	position: relative;
-  top: 2px;
-  left: 140px;
+  top: 3px;
+  left: 132px;
 	text-align: center;
-  /* display: none; */
 
 }
+
+.fieldset_error .fieldset__error {
+  display: block;
+}
+
 
 .checkbox {
   display: flex;

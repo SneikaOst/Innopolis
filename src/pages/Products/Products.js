@@ -1,13 +1,15 @@
-import Card from "../components/elements/card";
-import { products } from "../menuList";
-import BasketButton from "../components/ui/BasketButton";
+import Card from "../../components/elements/card";
+import { products } from "../../menuList";
+import BasketButton from "../../components/ui/BasketButton";
 import "./Products.css";
-import Button from "../components/ui/Button";
+import Button from "../../components/ui/Button";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 
 import { v4 as uuidv4 } from "uuid";
+
+import { useLogOut, useRedirectIfNotAuth } from "../../hooks/authHooks";
 
 function Products() {
 
@@ -25,6 +27,10 @@ function Products() {
     }
   }
 
+  const logOut = useLogOut();
+
+  useRedirectIfNotAuth()
+
   return (
     <div className="Products">
       <div className="container">
@@ -40,9 +46,7 @@ function Products() {
               <BasketButton></BasketButton>
             </Link>
 
-            <Link to="/form">
-              <Button>Выйти</Button>
-            </Link>
+            <Button onClick={() => logOut()}>Выйти</Button>
           </div>
         </header>
 

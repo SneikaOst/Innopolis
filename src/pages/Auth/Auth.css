@@ -1,5 +1,5 @@
 .PageForm {
-	background: url('../../public/images/background_form.png') center/cover no-repeat;
+	background: url('../../../public/images/background_form.png') center/cover no-repeat;
 	height: 100vh;
 	width: 100vw;
 }

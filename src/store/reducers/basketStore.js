@@ -32,7 +32,6 @@ const basketSlice = createSlice({
   name: 'basket',
   initialState: {
     basket: [],
-    // coutProducts: 0,
     pricesbasket: 0,
     countProducts: 0
   },
@@ -48,8 +47,8 @@ const basketSlice = createSlice({
     },
 
     removeProductBasket (state, action) {
-      state.basket = state.basket.filter((item) => {
-        return item.idx !== action.payload
+      state.basket = state.basket.filter((product) => {
+        return product.idx !== action.payload
       })
       
       state.pricesbasket = state.basket.reduce((sum, current) => {
