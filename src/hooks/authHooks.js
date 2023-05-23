@@ -7,15 +7,16 @@ export const useAuth = () => {
   return useSelector((state) => state.auth);
 };
 
-export const useRedirectIfNotAuth = () => {
-  const navigate = useNavigate();
-  const auth = useAuth();
-  useEffect(() => {
-    if (!auth) {
-      navigate("/auth");
-    }
-  }, [auth]);
-};
+// временно скроем начальную страницу авторизации, если пользователь не авторизован
+// export const useRedirectIfNotAuth = () => {
+//   const navigate = useNavigate();
+//   const auth = useAuth();
+//   useEffect(() => {
+//     if (!auth) {
+//       navigate("/auth");
+//     }
+//   }, [auth]);
+// };
 
 export const useLogOut = () => {
   const dispatch = useDispatch();
